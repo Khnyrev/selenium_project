@@ -1,3 +1,4 @@
+import datetime
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -37,6 +38,10 @@ get_url = driver.current_url
 print(get_url)
 assert url == get_url
 print('GOOOOD URL')
+
+now_date = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M.%S")
+name_screenshot = "screenshot" + now_date + '.png'
+driver.save_screenshot('/Users/alekseykhnyrev/PycharmProjects/pythonSeleniumProject/selenium_project/screen' + name_screenshot)
 
 time.sleep(1)
 driver.close()
