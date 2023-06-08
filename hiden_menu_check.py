@@ -43,5 +43,13 @@ now_date = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M.%S")
 name_screenshot = "screenshot" + now_date + '.png'
 driver.save_screenshot('/Users/alekseykhnyrev/PycharmProjects/pythonSeleniumProject/selenium_project/screenshots/screen' + name_screenshot)
 
+menu = driver.find_element(By.XPATH, '//button[@id="react-burger-menu-btn"]')
+menu.click()
+print("Menu button Click")
+time.sleep(2)
+link_about = driver.find_element(By.XPATH, '//a[@id="about_sidebar_link"]')
+link_about.click()
+print("About button Click")
+
 time.sleep(1)
 driver.close()
