@@ -43,5 +43,11 @@ now_date = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M.%S")
 name_screenshot = "screenshot" + now_date + '.png'
 driver.save_screenshot('/Users/alekseykhnyrev/PycharmProjects/pythonSeleniumProject/selenium_project/screenshots/screen' + name_screenshot)
 
+driver.back()
+print("go back")
+time.sleep(1)
+driver.forward()
+print('go forward')
+
 time.sleep(1)
 driver.close()
